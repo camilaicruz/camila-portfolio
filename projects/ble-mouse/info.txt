@@ -1,0 +1,49 @@
+# ============================================================
+# PROJECT INFO FILE — edit this, save, refresh the page.
+#
+# Header lines are "key: value". Sections start with [summary], [media], [updates], [writeup].
+# "repo:" (optional) adds a "View code on GitHub" button.
+# Media lines:   photo: file.jpg | optional caption
+#                video: file.mp4 | optional caption
+#   (put the file in this same folder; if the file isn't there yet, a placeholder shows instead)
+# Updates: start each one with a date line like "October 13: Made this CAD".
+#   Write them oldest → newest (add new ones at the bottom); the site shows newest first.
+# When the project is done, change status to "finished": the update log hides and
+# only the [writeup] + [media] show.
+# Lines starting with # are ignored.
+# ============================================================
+
+title: BLE Flight-Stick Mouse
+tagline: A wireless joystick mouse — tilt the stick to move the cursor, twist the grip to scroll.
+status: in progress
+dates: Sep 2026 – present
+role: Personal project · solo
+repo: https://github.com/camilaicruz/esp32-ble-mouse-full
+tags: C++, ESP32-S3, Bluetooth LE HID, MPU-6050, Sensor fusion, Fusion 360, 3D printing, Laser cutting
+
+[summary]
+A flight-stick grip on a low wedge base that works as a wireless Bluetooth mouse. A spring-centered 2-axis potentiometer joystick in the base reads stick tilt for precise cursor control, while an MPU-6050 inside the grip turns a twist of the handle into scrolling. The same motion sensor wakes the board from deep sleep when someone touches the stick, saving battery.
+
+The base has an OLED status screen (battery, speed setting, connection state), three arcade buttons for drag-lock, speed and mode, and two thumb buttons on the grip for clicks. It runs on a Seeed XIAO ESP32-S3 with a built-in LiPo charger, inside a 3D-printed shell with a laser-cut acrylic top plate.
+
+It started as a handheld tilt "air mouse" and grew into a flight-stick so it could also serve a real accessibility use case: precise cursor control without gripping or sliding a regular mouse.
+
+[media]
+photo: breadboard-uno.jpg | First bring-up: MPU-6050 + OLED on an Arduino Uno, live pitch/roll
+photo: breadboard-oled.jpg | OLED showing live tilt readings
+photo: breadboard-vertical.jpg | Sensor and display on the breadboard
+video: tilt-test-1.mp4 | Bench test 1
+video: tilt-test-2.mp4 | Bench test 2
+photo: cad-grip.jpg | Grip CAD (coming soon)
+
+[updates]
+September 10: Sensor and display working on the breadboard
+The MPU-6050 and SSD1306 OLED are wired over I²C and confirmed working on an Arduino Uno, live-displaying pitch and roll.
+photo: breadboard-uno.jpg | Breadboard prototype
+
+September 21: Bench test 2
+Second round of bench testing on the breadboard prototype.
+video: tilt-test-2.mp4 | Bench test 2
+
+[writeup]
+Final writeup goes here once the mouse is finished: what worked, what I'd change, measured battery life, and a link to the GitHub repo.

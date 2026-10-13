@@ -1,0 +1,90 @@
+# Design Work — shown on the Design Work page.
+#
+# One block per piece/campaign, separated by a line with three dashes (---).
+# Images live in assets/design/. Lines starting with # are ignored.
+#
+#   type: grid      → a 3-post Instagram grid banner (one wide image, 3:1.33 ratio).
+#                     Shown in "Grid launches" and splits apart into its 3 posts.
+#   type: campaign  → a card in the "Campaigns" slider. The first image is the cover;
+#                     clicking the card opens all its images in a gallery.
+#
+#   title:        name of the piece
+#   when:         date or event (short)
+#   description:  one or two sentences
+#   image:        file name (repeat the line for more images)
+
+type: grid
+title: Senior Fundraiser
+when: Senior class identity
+description: The launch grid that introduced our senior class branding — sun, clouds and the CeDIn 2026 palette.
+image: fundraiser-grid.jpg
+---
+type: grid
+title: Bake Sale
+when: January 2026
+description: Collage-style announcement grid with cut-out pastries and torn-paper type.
+image: bakesale-grid.jpg
+---
+type: grid
+title: Noche Puertorriqueña
+when: Fundraiser night
+description: A starry-night skyline of Old San Juan for our Puerto Rican culture night.
+image: noche-grid.jpg
+---
+type: grid
+title: Movie Night
+when: Spring 2026
+description: Retro cinema grid with film reels and halftone textures.
+image: movienight-grid.jpg
+---
+type: campaign
+title: CRUSH — Coachella San Juan
+when: February 6, 2026
+description: Bold red, distressed type and QR ticketing for our Valentine's season party — banner plus two lineup flyers.
+image: crush-flyer-1.jpg
+image: crush-banner.jpg
+image: crush-flyer-2.jpg
+---
+type: campaign
+title: Movie Night
+when: April 10
+description: A full campaign — poster, banner, grid and concession menu — built around a playful scrapbook look.
+image: movienight-flyer.jpg
+image: movienight-banner.jpg
+image: movienight-menu.jpg
+image: movienight-grid.jpg
+---
+type: campaign
+title: Menchie's Frozen Yogurt Fundraiser
+when: December 18
+description: Sweet, bubbly graphics in the senior-class blue for a frozen yogurt fundraiser at San Patricio Plaza.
+image: menchies-flyer.jpg
+image: menchies-banner.jpg
+---
+type: campaign
+title: Bake Sale
+when: January 22, 2026
+description: Warm photography of pastries on a royal-blue field, sized for posts and banners.
+image: bakesale-post.jpg
+image: bakesale-banner.jpg
+image: bakesale-grid.jpg
+---
+type: campaign
+title: Noche Puertorriqueña × Chili's
+when: Fundraiser night
+description: Story-format flyer and Instagram grid for a fundraising night at Chili's Plaza Guaynabo.
+image: noche-story.jpg
+image: noche-grid.jpg
+---
+type: campaign
+title: ¿Buscas Tutorías?
+when: National Honor Society
+description: Recruitment graphics for the NHS peer-tutoring program I designed and ran as chapter president.
+image: tutorias-flyer.jpg
+image: tutorias-banner.jpg
+---
+type: campaign
+title: Senior Awards 2026
+when: May 11, 2026
+description: Certificate design for the senior superlatives — like "Mr. Senioritis."
+image: senior-awards.jpg

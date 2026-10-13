@@ -1,0 +1,4 @@
+# Projects shown on the Technical Projects page, top to bottom.
+# One folder name per line. Each folder needs an info.txt (copy an existing one to start).
+ble-mouse
+otv

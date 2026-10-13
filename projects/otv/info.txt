@@ -1,0 +1,44 @@
+# ============================================================
+# PROJECT INFO FILE — edit this, save, refresh the page.
+# Same format as projects/ble-mouse/info.txt (instructions at the top of that file).
+# ============================================================
+
+title: OTV — Fire-Suppression Over-Terrain Vehicle
+tagline: An autonomous robot that crosses an obstacle course, finds the flames and puts them out.
+status: in progress
+dates: Aug 2026 – Dec 2026
+role: Hardware & mission subsystems
+team: ENES100 · "The Hottest Team" (8 students)
+tags: Arduino Mega, Mecanum drive, Flame sensor array, Ultrasonic sensing, Onshape CAD, PLA
+
+[summary]
+For ENES100 at the University of Maryland, our team of eight is designing and building an over-terrain vehicle (OTV) that navigates an arena autonomously — including climbing a log obstacle — and completes a fire-suppression mission, all within a $320 budget.
+
+I work on the hardware and the mission subsystem. The robot runs on an Arduino Mega with four mecanum wheels driven by 12 V gearmotors. For the mission, a 5-channel flame sensor on a 3D-printed pedestal locates the candles, and blower fans with custom 3D-printed nozzles direct air to put them out. Two HC-SR04 ultrasonic sensors handle obstacle detection, and an ArUco marker lets the arena's vision system track our position.
+
+[media]
+photo: cad-closeup.jpg | Full CAD: mecanum drive, Arduino Mega, battery and ArUco marker
+photo: cad-iso.jpg | Isometric view with the mission nozzles
+photo: cad-front.jpg | Front view
+photo: cad-log-obstacle.jpg | Checking clearance over the log obstacle
+photo: cad-top.jpg | Top view of the component layout
+photo: cad-exploded.jpg | Exploded view
+photo: cad-nozzle.jpg | 3D-printed air nozzle concept
+photo: drawing-views.jpg | Engineering drawing views
+photo: mission-flowchart.jpg | Mission control flowchart
+photo: build-photo.jpg | Fabricated OTV (coming soon)
+
+[updates]
+September 23: Milestone 1 — initial design presentation
+Brainstormed mission strategies as a team and presented our first concept for the fire-suppression OTV.
+
+October 7: Milestone 2 — design review
+Presented the full CAD, motor calculations, wiring and mission flowchart. Feedback we're acting on: raise the flame sensor so it sees every candle, prototype the nozzles, and make sure the chassis can't get beached on the log.
+photo: cad-closeup.jpg | CAD presented at the design review
+photo: cad-nozzle.jpg | Nozzle concept
+
+October 13: Writing the preliminary design report
+Finalizing every component, its power needs and sensing range for Milestone 3, and laying out the pin map on the Arduino Mega for motors, sensors and blowers.
+
+[writeup]
+Final writeup goes here after the final performance in December: how the OTV did on the course, what we'd redesign, and photos/video of the run.

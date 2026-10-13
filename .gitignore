@@ -1,0 +1,2 @@
+# Raw source files stay out of the repo (the yearbook PDF is 656 MB)
+*.pdf

@@ -1,0 +1,16 @@
+# Licenses & Certifications — shown on the About Me page.
+#
+# Add one block per certification, separated by a line with three dashes (---).
+# Lines starting with # are ignored. Only "name" is required; the rest are optional.
+#
+# Example (remove the # signs to use it):
+#
+# name: Laser Cutting & 3D Printing Training
+# issuer: University of Maryland — Terrapin Works
+# date: October 2026
+# id: ABC-123
+# link: https://example.com/my-certificate
+# ---
+# name: Another Certification
+# issuer: Issuer Name
+# date: January 2027

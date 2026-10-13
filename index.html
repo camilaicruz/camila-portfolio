@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Camila Cruz — Portfolio</title>
+  <meta name="description" content="Portfolio of Camila I. Cruz, Electrical Engineering student at the University of Maryland — hardware projects and graphic design.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%279%27 fill=%27%23a8e6a1%27/%3E%3Cpath d=%27M32 0v23a9 9 0 0 1-9 9H0z%27 fill=%27%23ffc49a%27/%3E%3C/svg%3E">
+</head>
+<body class="home" data-page="home">
+
+  <header class="menubar glass">
+    <span class="brand"><span class="brand-dot" aria-hidden="true"></span>Camila Cruz</span>
+    <span class="menu-meta"><span class="date" id="date"></span><span id="clock"></span></span>
+  </header>
+
+  <!-- wallpaper: rolling hills under a warm sky, a polished nod to the pixel-desktop draft -->
+  <div class="wallpaper" aria-hidden="true">
+    <svg viewBox="0 0 1440 400" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="h1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c6ec8f"/><stop offset="1" stop-color="#a6dc6a"/></linearGradient>
+        <linearGradient id="h2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd65a"/><stop offset="1" stop-color="#7fc24a"/></linearGradient>
+        <linearGradient id="h3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc44a"/><stop offset="1" stop-color="#5fae3a"/></linearGradient>
+      </defs>
+      <path fill="url(#h1)" d="M0 170 C220 90 420 110 640 160 S1080 70 1440 130 V400 H0Z"/>
+      <path fill="url(#h2)" d="M0 250 C260 180 520 210 760 250 S1200 190 1440 230 V400 H0Z"/>
+      <path fill="url(#h3)" d="M0 330 C300 280 600 300 900 330 S1300 300 1440 320 V400 H0Z"/>
+    </svg>
+  </div>
+
+  <main class="desktop">
+    <nav class="icons" aria-label="Open a page">
+      <a class="desk-icon" href="about.html" style="--i:0; --tint: rgba(143, 209, 79, 0.8)" data-title="About Me">
+        <span class="tile glass"><span data-icon="user"></span></span>
+        <span class="label">About Me</span>
+      </a>
+      <a class="desk-icon" href="projects.html" style="--i:1; --tint: rgba(255, 154, 60, 0.82)" data-title="Technical Projects">
+        <span class="tile glass"><span data-icon="chip"></span></span>
+        <span class="label">Technical Projects</span>
+      </a>
+      <a class="desk-icon" href="design.html" style="--i:2; --tint: rgba(255, 216, 74, 0.88)" data-title="Design Work">
+        <span class="tile glass"><span data-icon="palette"></span></span>
+        <span class="label">Design Work</span>
+      </a>
+      <a class="desk-icon" href="contact.html" style="--i:3; --tint: rgba(124, 196, 245, 0.82)" data-title="Contact">
+        <span class="tile glass"><span data-icon="mail"></span></span>
+        <span class="label">Contact</span>
+      </a>
+    </nav>
+
+    <section class="welcome glass">
+      <p class="eyebrow">University of Maryland · Class of 2030</p>
+      <h1>Hi, I'm Camila — I build <span class="accent">hardware</span> and design what people see.</h1>
+      <p class="lede">Electrical Engineering student from San Juan, Puerto Rico. I prototype wireless devices with ESP32s and 3D-printed parts, and I spent senior year as my class's graphic designer and yearbook editor.</p>
+      <p class="hint">Click an icon to open a window.</p>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Menu bar clock
+    const clock = document.getElementById('clock'), date = document.getElementById('date');
+    function tick() {
+      const now = new Date();
+      clock.textContent = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+      date.textContent = now.toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' });
+    }
+    tick(); setInterval(tick, 15000);
+
+    // Icon click: a glass window grows out of the icon, then we navigate.
+    document.querySelectorAll('.desk-icon').forEach(link => link.addEventListener('click', e => {
+      if (REDUCED_MOTION || e.metaKey || e.ctrlKey || e.shiftKey) return;
+      e.preventDefault();
+      const from = link.querySelector('.tile').getBoundingClientRect();
+      const gutter = Math.min(Math.max(innerWidth * 0.03, 12), 28);
+      const width = Math.min(1180, innerWidth - 2 * gutter);
+      const win = document.createElement('div');
+      win.className = 'launch-window';
+      win.innerHTML = '<div class="bar"><span style="background:#ffb08a"></span><span style="background:#ffe08f"></span><span style="background:#a8e6a1"></span></div>';
+      Object.assign(win.style, { left: from.left + 'px', top: from.top + 'px', width: from.width + 'px', height: from.height + 'px', opacity: '0.4' });
+      document.body.append(win);
+      win.getBoundingClientRect(); // commit start size before animating
+      Object.assign(win.style, { left: (innerWidth - width) / 2 + 'px', top: gutter + 'px', width: width + 'px', height: innerHeight - 2 * gutter + 'px', opacity: '1' });
+      try { sessionStorage.setItem('nav', 'tab'); } catch {}
+      setTimeout(() => { location.href = link.href; }, 480);
+    }));
+
+    // Coming back with the browser's back button: drop the leftover launch window.
+    addEventListener('pageshow', () => document.querySelectorAll('.launch-window').forEach(w => w.remove()));
+  </script>
+</body>
+</html>

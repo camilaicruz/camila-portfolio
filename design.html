@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Design Work — Camila Cruz</title>
+  <meta name="description" content="Senior-year graphic design and yearbook by Camila I. Cruz.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%279%27 fill=%27%23a8e6a1%27/%3E%3Cpath d=%27M32 0v23a9 9 0 0 1-9 9H0z%27 fill=%27%23ffc49a%27/%3E%3C/svg%3E">
+</head>
+<body data-page="design">
+  <main class="window glass">
+    <div class="window-body">
+      <p class="eyebrow">Design work · Senior year 2025–26</p>
+      <h1>Designing for the <span class="hl">Class of 2026</span>.</h1>
+      <p class="lede">As Senior Class Public Relations &amp; Graphic Designer at CeDIn, I created every visual for our class — fundraisers, events, social media and the yearbook — under one consistent identity.</p>
+
+      <section class="section" aria-labelledby="grids-h">
+        <div class="section-head">
+          <h2 id="grids-h">Grid launches</h2>
+          <p class="lede" style="margin:0;font-size:.95rem">Each banner is three Instagram posts — hover (or scroll on mobile) to split it apart.</p>
+        </div>
+        <div class="grid-launches" id="grids"></div>
+      </section>
+
+      <section class="section" aria-labelledby="camp-h">
+        <div class="section-head">
+          <h2 id="camp-h">Campaigns</h2>
+          <div class="slider-controls">
+            <button class="btn icon" id="prev" aria-label="Previous campaigns"><span data-icon="left"></span></button>
+            <button class="btn icon" id="next" aria-label="Next campaigns"><span data-icon="right"></span></button>
+          </div>
+        </div>
+        <div class="slider"><div class="slider-track" id="campaigns"></div></div>
+      </section>
+
+      <section class="section yearbook glass" aria-labelledby="yb-h">
+        <p class="eyebrow">Designer &amp; editor</p>
+        <h2 id="yb-h">Anuario '26 — CeDIn Senior Yearbook</h2>
+        <p class="lede">I designed and produced our senior yearbook from scratch — layout, typography, photo curation and storytelling across 136 pages. Drag a corner or use the arrows to turn the page.</p>
+        <div class="flip-stage" id="flip-stage">
+          <div class="flip-loading" id="flip-loading">Loading yearbook…</div>
+          <div id="book"></div>
+        </div>
+        <div class="flip-controls">
+          <button class="btn icon" id="yb-prev" aria-label="Previous page"><span data-icon="left"></span></button>
+          <span class="flip-label" id="yb-label" aria-live="polite">Cover</span>
+          <button class="btn icon" id="yb-next" aria-label="Next page"><span data-icon="right"></span></button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/vendor/page-flip.browser.js"></script>
+  <script src="js/design.js"></script>
+</body>
+</html>
